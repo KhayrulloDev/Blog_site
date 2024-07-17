@@ -3,8 +3,7 @@ import * as React from "react"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils"
-
-import {IoMdClose} from 'reaic-icons/io';
+import { X } from "lucide-react";
 
 const Sheet = SheetPrimitive.Root
 

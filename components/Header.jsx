@@ -4,7 +4,6 @@ import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 
 
-
 const Header = () => {
     return (
         <header className="py-8 xl:py-12 text-white">
@@ -12,7 +11,7 @@ const Header = () => {
                 {/* Logo */}
                 <Link href="/">
                     <h1 className="text-4xl font-semibold">
-                        KhayrulloDev<span className="text-accent">.</span>
+                        <img src="/logo.svg" alt=""/>
                     </h1>
                 </Link>
 
@@ -20,15 +19,17 @@ const Header = () => {
                 <div className="items-center gap-8 container mx-auto flex justify-end">
                     <Nav />
                     <Link href="/contact">
-                        <Button>Hire me</Button>
+                        <Button style={{
+                            background: "green",
+                        }}>Hire me</Button>
                     </Link>
                 </div>
-            
+
                 {/* Mobile nav */}
                 <div className="xl:hidden">
                     <MobileNav />
                 </div>
-            </div> 
+            </div>
         </header>
     );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import Image from 'next/image';
 
 const articles = [
   {
@@ -37,7 +38,7 @@ function Hero() {
     <section className="hero">
       <div className="container">
         <h1>BlogSaytiga Xush Kelibsiz</h1>
-        <p>Bizning blogimizda eng so'nggi maqolalarni o'qing</p>
+        <p>Bizning blogimizda eng so&apos;nggi maqolalarni o&apos;qing</p>
       </div>
     </section>
   );
@@ -47,11 +48,11 @@ function LatestArticles({ articles }) {
   return (
     <section className="latest-articles">
       <div className="container">
-        <h2>Eng So'nggi Maqolalar</h2>
+        <h2>Eng So&apos;nggi Maqolalar</h2>
         <div className="articles-grid">
           {articles.map(article => (
             <article key={article.id} className="article-card">
-              <img src={article.imageUrl} alt={article.title} />
+              <Image src={article.imageUrl} alt={article.title} width={40} height={40} />
               <h3>{article.title}</h3>
               <p>{article.description}</p>
             </article>

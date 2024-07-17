@@ -1,0 +1,59 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark mode fon rangi */
+    color: #ffffff; /* Dark mode matn rangi */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .hero {
+    background-color: #1f1f1f; /* Hero bo'limi uchun fon rangi */
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .latest-articles {
+    padding: 40px 0;
+  }
+  
+  .articles-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .article-card {
+    background-color: #1f1f1f; /* Article kartalari uchun fon rangi */
+    padding: 20px;
+    border: 1px solid #333; /* Kartalar uchun chegara rangi */
+    border-radius: 5px;
+    flex: 1 1 calc(33.333% - 40px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Soyalar */
+    transition: transform 0.3s ease; /* Kattalashish uchun o'zgarish */
+  }
+  
+  .article-card img {
+    width: 100%;
+    height: 150px; /* Tasvir balandligi */
+    object-fit: cover; /* Tasvirni o'lchamiga moslashtirish */
+    border-radius: 5px;
+  }
+  
+  .article-card:hover {
+    transform: scale(1.05); /* Hover qilganda kattalashish */
+  }
+  
+  .footer {
+    background-color: #1f1f1f; /* Footer uchun fon rangi */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  

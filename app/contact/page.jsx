@@ -62,7 +62,7 @@ const Contact = () => {
 
             {/* Your Information */}
             <div className="relative bg-gray-800 p-8 rounded shadow-md w-full max-w-md mb-8 text-center transform transition-transform duration-500 hover:scale-105 z-20">
-                <h1 className="text-3xl font-bold mb-4">About Me</h1>
+                <h1 className="text-3xl font-bold mb-4">Contact</h1>
                 <div className="flex flex-col items-start space-y-2">
                     <div className="flex items-center">
                         <FaUser className="mr-2" />

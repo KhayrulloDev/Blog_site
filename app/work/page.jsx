@@ -2,44 +2,8 @@
 import '../globals.css';
 import React, { useEffect } from 'react';
 
-const generateRandomDigit = () => (Math.random() > 0.5 ? '1' : '0');
-
-const generateRandomStyle = () => ({
-  left: `${Math.random() * 100}vw`,
-  animationDuration: `${Math.random() * 3 + 2}s`, // Slightly longer duration for continuous effect
-  animationDelay: '0s', // Remove delay to start immediately
-});
-
-const addRandomDigit = (container) => {
-  const span = document.createElement('span');
-  span.textContent = generateRandomDigit();
-  Object.assign(span.style, generateRandomStyle());
-  container.appendChild(span);
-
-  // Remove the span element after it completes the animation
-  span.addEventListener('animationend', () => {
-    span.remove();
-    addRandomDigit(container); // Add a new digit after the previous one finishes
-  });
-};
-
 const Work = () => {
-    // useEffect(() => {
-    //     const container = document.getElementById('binary-container1');
-    //     if (container) {
-    //         for (let i = 0; i < 50; i++) { // Start with more digits for a full effect
-    //             addRandomDigit(container);
-    //         }
-    //         const intervalId = setInterval(() => {
-    //           for (let i = 0; i < 5; i++) { // Add more digits each interval
-    //             addRandomDigit(container);
-    //           }
-    //         }, 100); // Add new digits every 100ms
-
-    //         return () => clearInterval(intervalId); // Cleanup the interval on component unmount
-    //     }
-    // }, []);
-
+    
     return (
         <div className="relative flex items-center justify-center h-screen bg-black text-white overflow-hidden">
           {/* Background animation for falling binary digits */}

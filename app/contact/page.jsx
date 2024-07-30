@@ -2,25 +2,6 @@
 import { useState, useEffect } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser } from 'react-icons/fa';
 
-const generateRandomDigit = () => (Math.random() > 0.5 ? '1' : '0');
-
-const generateRandomStyle = () => ({
-  left: `${Math.random() * 100}vw`,
-  animationDuration: `${5}s`, // Shorten duration for faster animation
-  animationDelay: '0s', // Remove delay to start immediately
-});
-
-const addRandomDigit = (container) => {
-  const span = document.createElement('span');
-  span.textContent = generateRandomDigit();
-  Object.assign(span.style, generateRandomStyle());
-  container.appendChild(span);
-
-  // Remove the span element after it completes the animation
-  span.addEventListener('animationend', () => {
-    span.remove();
-  });
-};
 
 const Contact = () => {
     const [form, setForm] = useState({
@@ -30,16 +11,6 @@ const Contact = () => {
 
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    useEffect(() => {
-      const container = document.getElementById('binary-container');
-      const intervalId = setInterval(() => {
-        for (let i = 0; i < 10; i++) { // Add more digits each interval
-          addRandomDigit(container);
-        }
-      }, 25); // Add new digits every 25ms
-
-      return () => clearInterval(intervalId); // Cleanup the interval on component unmount
-    }, []);
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });

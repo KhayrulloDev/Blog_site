@@ -2,39 +2,8 @@
 import '../globals.css';
 import React, { useEffect } from 'react';
 
-const generateRandomDigit = () => (Math.random() > 0.5 ? '1' : '0');
-
-const generateRandomStyle = () => ({
-  left: `${Math.random() * 100}vw`,
-  animationDuration: `${Math.random() * 0.5 + 0.1}s`, // Shorten duration for faster animation
-  animationDelay: '0s', // Remove delay to start immediately
-});
-
-const addRandomDigit = (container) => {
-  const span = document.createElement('span');
-  span.textContent = generateRandomDigit();
-  Object.assign(span.style, generateRandomStyle());
-  container.appendChild(span);
-
-  // Remove the span element after it completes the animation
-  span.addEventListener('animationend', () => {
-    span.remove();
-  });
-};
-  
-
 
 const Resume = () => {
-    // useEffect(() => {
-    //     const container = document.getElementById('binary-container1');
-    //     const intervalId = setInterval(() => {
-    //       for (let i = 0; i < 5; i++) { // Add more digits each interval
-    //         addRandomDigit(container);
-    //       }
-    //     }, 15); // Add new digits every 50ms
-    
-    //     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
-    //   }, []);
     
       return (
         <div className="flex items-center justify-center h-screen bg-black text-white relative overflow-hidden">

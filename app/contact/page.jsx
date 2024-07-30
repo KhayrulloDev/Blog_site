@@ -6,7 +6,7 @@ const generateRandomDigit = () => (Math.random() > 0.5 ? '1' : '0');
 
 const generateRandomStyle = () => ({
   left: `${Math.random() * 100}vw`,
-  animationDuration: `${Math.random() * 2 + 1.5}s`, // Shorten duration for faster animation
+  animationDuration: `${5}s`, // Shorten duration for faster animation
   animationDelay: '0s', // Remove delay to start immediately
 });
 
@@ -53,16 +53,15 @@ const Contact = () => {
         // Clear form
         setForm({ phone: '', message: '' });
         // Hide message after 3 seconds
-        setTimeout(() => setIsSubmitted(false), 1800);
+        setTimeout(() => setIsSubmitted(false), 3000);
     };
 
     return (
         <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white p-4 overflow-hidden">
             {/* Background animation for falling binary digits */}
-            <div id="binary-container" className="falling-digits"></div>
 
             {/* Your Information */}
-            <div className="relative bg-gray-800 p-8 rounded shadow-md w-full max-w-md mb-8 text-center transform transition-transform duration-500 hover:scale-105 z-10">
+            <div className="relative bg-gray-800 p-8 rounded shadow-md w-full max-w-md mb-8 text-center transform transition-transform duration-500 hover:scale-105 z-20">
                 <h1 className="text-3xl font-bold mb-4">About Me</h1>
                 <div className="flex flex-col items-start space-y-2">
                     <div className="flex items-center">

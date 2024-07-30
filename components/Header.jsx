@@ -46,7 +46,7 @@ const Header = () => {
                 {/* Logo */}
                 <Link href="/" legacyBehavior>
                     <a className="flex items-center">
-                        <Image src="/logo.svg" alt="Logo" className="h-10" />
+                        <Image src="/logo.svg" alt="Logo" className="h-10" width={200} height={100} />
                     </a>
                 </Link>
 

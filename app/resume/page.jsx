@@ -25,21 +25,21 @@ const addRandomDigit = (container) => {
 
 
 const Resume = () => {
-    useEffect(() => {
-        const container = document.getElementById('binary-container');
-        const intervalId = setInterval(() => {
-          for (let i = 0; i < 5; i++) { // Add more digits each interval
-            addRandomDigit(container);
-          }
-        }, 15); // Add new digits every 50ms
+    // useEffect(() => {
+    //     const container = document.getElementById('binary-container1');
+    //     const intervalId = setInterval(() => {
+    //       for (let i = 0; i < 5; i++) { // Add more digits each interval
+    //         addRandomDigit(container);
+    //       }
+    //     }, 15); // Add new digits every 50ms
     
-        return () => clearInterval(intervalId); // Cleanup the interval on component unmount
-      }, []);
+    //     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+    //   }, []);
     
       return (
         <div className="flex items-center justify-center h-screen bg-black text-white relative overflow-hidden">
           {/* Background animation for falling binary digits */}
-          <div id="binary-container" className="falling-digits"></div>
+          <div className="falling-digits"></div>
     
           <div className="text-center animate-pulse relative z-10">
             <h1 className="text-6xl font-bold mb-4">Coming Soon</h1>

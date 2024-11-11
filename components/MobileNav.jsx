@@ -37,7 +37,6 @@
 // };
 
 // export default MobileNav;
-
 "use client";
 
 import { useState } from 'react';
@@ -71,7 +70,7 @@ const MobileNav = () => {
             <SheetContent side="right" className="flex flex-col items-center space-y-4 mt-4 bg-gray-800 text-white w-64 h-full p-4">
                 <Link href="/" legacyBehavior>
                     <a onClick={handleLinkClick}>
-                        <Image src="/logo.svg" alt="Logo" className="h-8 w-auto mb-4" />
+                        <Image src="/logo.svg" alt="Logo" width={100} height={40} className="mb-4" />
                     </a>
                 </Link>
                 {links.map((link) => (

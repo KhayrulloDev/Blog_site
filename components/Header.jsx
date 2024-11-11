@@ -53,7 +53,7 @@ const Header = () => {
                 {/* Desktop nav */}
                 <div className="hidden xl:flex items-center gap-8 justify-end">
                     <Nav />
-                    <Link href="/contact" legacyBehavior>
+                    <Link href="/hire-me" legacyBehavior>
                         <a>
                             <Button style={{ background: "green" }}>Hire me</Button>
                         </a>
